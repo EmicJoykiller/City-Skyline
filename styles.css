@@ -6,7 +6,9 @@
   --window-color1: black;
   --window-color2: #8cd9b3;
   --window-color3: #d98cb3;
+  --window-color4: #8cb3d9;
 }
+
 * {
   border: 1px solid black;
   box-sizing: border-box;
@@ -28,16 +30,22 @@ body {
   position: absolute;
   top: 0;
 }
+.building-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.window-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
 /* BACKGROUND BUILDINGS - "bb" stands for "background building" */
 .bb1 {
   width: 10%;
   height: 70%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-
 .bb1a {
   width: 70%;
 }
@@ -89,7 +97,7 @@ body {
   background: repeating-linear-gradient(
     90deg,
     var(--building-color3),
-    var(--building-color3) 7.5%,
+    var(--building-color3),
     var(--window-color3) 15%
   );
 }
@@ -97,6 +105,23 @@ body {
 .bb4 {
   width: 11%;
   height: 58%;
+}
+
+.bb4a {
+  width: 3%;
+  height: 10%;
+  background-color: var(--building-color4);
+}
+
+.bb4b {
+  width: 80%;
+  height: 5%;
+  background-color: var(--building-color4);
+}
+
+.bb4c {
+  width: 100%;
+  height: 85%;
   background-color: var(--building-color4);
 }
 
@@ -139,4 +164,49 @@ body {
   width: 9%;
   height: 38%;
   background-color: var(--building-color3);
+}
+
+.bb4-window{
+    width: 18%;
+    height: 90%;
+    background-color: var(--window-color4);
+}
+
+.fb1b{
+    width: 60%;
+    height: 10%;
+}
+
+.fb1c{
+    width: 100%;
+    height: 80%;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--building-color4) 0%,
+        var(--building-color4) 10%,
+        transparent 10%,
+        transparent 15%
+    ),
+    (
+        var(--building-color4) 0%,
+        var(--building-color4) 10%,
+        var(--window-color4) 10%,
+        var(--window-color4) 90%
+    )
+}
+
+.fb1a{
+    border-bottom: 7vh solid var(--building-color4);
+    border-left: 2vw solid transparent;
+    border-right: 2vw solid transparent;
+
+}
+
+.fb2a{
+    width: 100%;
+}
+
+.fb2b{
+    width: 100%;
+    height: 75%;
 }
